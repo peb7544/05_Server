@@ -1,0 +1,10 @@
+package edu.kh.servlet.controller;
+
+import jakarta.servlet.http.HttpServlet;
+
+@webServlet("/coffe")
+public class ExampleController3 extends HttpServlet {
+	
+	
+
+}
