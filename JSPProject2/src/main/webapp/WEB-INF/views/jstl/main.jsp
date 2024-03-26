@@ -105,13 +105,13 @@
 	
 	<h1>3. 변수 출력(c:out 태그)</h1>
 	
-	<!-- <pre>
+	<pre>
 		\${key} EL 구문 비슷함
 		
 		- 단, escapeXml="true"(기본값) 설정 시
 		  html 태그가 해석X
 		- escapeXml = "false" : html 태그 해석 O
-	</pre> -->
+	</pre> 
 	
 	<c:set var="temp" value="<h1>배부르네요</h1>"/>
 	
@@ -141,5 +141,37 @@
 	
 	<a href="loop">JSTL을 이용한 반복문</a>
 	<!-- /jstl/loop 이라는 요청 주소를 처리할 Controller가 필요함 : JSPLLoopController -->
+	
+	<hr><hr><hr>
+	
+	<%--
+		현재 경로 : http://localhost:8080/jstl/main
+		목표 경로 : http://localhost:8080/jstl/student/selectAll
+	 --%>
+	<a href="student/selectAll">workbook에서 학생 전체 조회하기</a>
+	<%--student/selectAll라는 요청을 처리할 Controller : SelectAllController --%>
+	
+	<br>
+	
+	<%--
+		현재 경로 : http://localhost:8080/jstl/main
+		목표 경로 : http://localhost:8080/jstl/student/selectArch
+	 --%>
+	<a href="student/selectArch">workbook에서 건축공학과인 학생만 찾기</a>
+	<%-- SelectArchController --%>
+	
+	
+	<br>
+	
+	<%--
+		현재 경로 : http://localhost:8080/jstl/main
+		목표 경로 : http://localhost:8080/jstl/student/selectOne
+	 --%>
+	<form action="student/selectOne" method="post">
+		<input type="text" name="deptName">
+		<button>찾기</button>
+	</form>
+	<%-- 작성한 학과의 학생만 조회 SelectOneController --%>
+	
 </body>
 </html>
